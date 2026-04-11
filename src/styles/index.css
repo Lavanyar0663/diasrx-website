@@ -1,0 +1,312 @@
+/* src/styles/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-blue: #3B82F6;
+    --primary-blue-soft: #E0F2FE;
+    --bg-light: #F9FAFB;
+    --text-dark: #111827;
+    --text-gray: #6B7280;
+    --border-color: #E5E7EB;
+    --white: #FFFFFF;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+}
+
+.app-root {
+    min-height: 100vh;
+}
+
+/* Split-Screen Web Auth Layout */
+.auth-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.auth-brand-side {
+    flex: 1;
+    background-color: #F9FAFB;
+    border-right: 1px solid var(--border-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 60px;
+    color: var(--text-dark);
+    overflow: hidden;
+}
+
+/* ── Decorative floating circles ── */
+/* ── Decorative subtle elements ── */
+.brand-deco-1 {
+    width: 340px;
+    height: 340px;
+    top: -80px;
+    right: -80px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.03) 0%, transparent 70%);
+}
+.brand-deco-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 60px;
+    right: 60px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.02) 0%, transparent 70%);
+}
+
+.auth-form-side {
+    flex: 1;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+    position: relative;
+}
+
+.brand-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ── Top badge ── */
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-blue-soft);
+    color: var(--primary-blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+}
+.brand-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+}
+
+/* ── Logo row ── */
+.brand-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+.brand-logo-container {
+    width: 56px;
+    height: 56px;
+    background: var(--primary-blue);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.brand-name-inline {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-dark);
+}
+
+/* ── Headline ── */
+.brand-title {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    color: var(--text-dark);
+}
+.brand-title-accent {
+    color: var(--primary-blue);
+}
+
+/* ── Subtitle ── */
+.brand-subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 420px;
+}
+
+/* ── Feature cards ── */
+.brand-features {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+.brand-feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px 18px;
+    transition: all 0.2s ease;
+}
+.brand-feature-card:hover {
+    border-color: var(--primary-blue);
+    background: var(--primary-blue-soft);
+}
+.brand-feature-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--primary-blue-soft);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue);
+    flex-shrink: 0;
+}
+.brand-feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.brand-feature-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+.brand-feature-desc {
+    font-size: 12px;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+/* ── Stats row ── */
+.brand-stats {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid var(--border-color);
+    padding-top: 28px;
+}
+.brand-stat {
+    flex: 1;
+    text-align: center;
+}
+.brand-stat:not(:last-child) {
+    border-right: 1px solid var(--border-color);
+}
+.brand-stat-value {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--primary-blue);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+.brand-stat-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+}
+
+.form-header-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.form-scroll-container {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.auth-footer {
+    padding-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 11px;
+    font-weight: 800;
+    color: #9CA3AF;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .auth-layout {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .auth-brand-side {
+        flex: none;
+        padding: 60px 24px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .brand-content {
+        max-width: 100%;
+    }
+
+    .brand-features {
+        display: none;
+    }
+
+    .auth-form-side {
+        flex: 1;
+        padding: 60px 24px;
+    }
+}
+
+/* Success Full-Width Web Container */
+.web-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
